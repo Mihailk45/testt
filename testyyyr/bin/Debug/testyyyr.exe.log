@@ -1,0 +1,50 @@
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\user\Desktop\xt_m\testyyyr\bin\Debug\testyyyr.exe, файл: c:\users\user\desktop\codeblocks\mingw\include\txlib.h, строка: 13722, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x658 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int) at c:\users\user\desktop\codeblocks\mingw\include\txlib.h:13722:
+
+  13720:     {
+  13721: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13722: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13723: 
+  13724: $   POINT size = txGetExtent (sourceImage);
+
+# 1 in void Forma::draw() at C:\Users\user\Desktop\xt_m\testyyyr\main.cpp:27:
+
+     25:         txDrawText (550, 500, 780, 550, text_answer3.c_str());
+     26:         txBitBlt(txDC(), 20, 220, 230, 170, pic_answer1);
+=>   27:         txBitBlt(txDC(), 285, 220, 230, 170, pic_answer2);
+     28:         txBitBlt(txDC(), 550, 220, 230, 170, pic_answer3);
+     29:    }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\user\desktop\codeblocks\mingw\include\txlib.h
+Compiled:	May 20 2025 18:37:10, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 20 2025 18:41:50
+
+Run file:	C:\Users\user\Desktop\xt_m\testyyyr\bin\Debug\testyyyr.exe
+Directory:	C:\Users\user\Desktop\xt_m\testyyyr
+
+--------------------------------------------------
